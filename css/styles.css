@@ -4,9 +4,11 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
-  --white-color: #fff;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+  --black-color: #000;
 
-  --primary-background: #e5e5e5;
+  --primary-background: #fff;
+  --second-background: #f5f4fa;
   --hero-footer-background: #2f303a;
 }
 
@@ -46,25 +48,26 @@ body {
 /* Шапка страницы */
 
 .page-header {
-  background: var(--white-color);
+  background: var(--primary-background);
 }
 
 /* Логотип в хедере и футере*/
 .page-header .logo,
 .footer .logo {
   font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: #000;
+  color: var(--black-color);
 }
 .page-header .logo-blue,
 .footer .logo-blue {
   color: var(--accent-color);
 }
 .footer .logo {
-  color: var(--white-color);
+  color: var(--primary-background);
 }
 
 /* Навигация в хедере */
@@ -100,18 +103,29 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: var(--primary-background);
 }
 
 .page-hero .button {
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: var(--white-color);
+  color: var(--primary-background);
   background-color: var(--accent-color);
 }
 
 /* Секция особенности */
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 
 .feature-title {
   font-size: 14px;
@@ -136,11 +150,12 @@ body {
 /* Cекция наша команда */
 
 .team {
-  background: #f5f4fa;
+  background: var(--second-background);
 }
 
 .team-сard {
-  background: var(--white-color);
+  background: var(--primary-background);
+  text-align: center;
 }
 
 .team-title.title {
@@ -156,7 +171,6 @@ body {
 .team-card-text {
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
 }
 
@@ -166,7 +180,7 @@ body {
   background-color: var(--hero-footer-background);
 }
 .footer .text {
-  color: var(--white-color);
+  color: var(--primary-background);
 }
 .footer-address.text {
   font-style: normal;
@@ -181,7 +195,7 @@ body {
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-link-color);
 }
 .footer .link:hover,
 .footer .link:focus {
@@ -191,7 +205,7 @@ body {
 /* Страница Портфолио */
 
 .portfolio-card {
-  background-color: var(--white-color);
+  background-color: var(--primary-background);
 }
 /* Cписок кнопок- фильтр */
 .portfolio-filter .button {
@@ -203,7 +217,7 @@ body {
 }
 .portfolio-filter .button:hover,
 .portfolio-filter .button:focus {
-  color: var(--white-color);
+  color: var(--primary-background);
   background-color: var(--accent-color);
 }
 /* Карточки портфолио */
